@@ -30,18 +30,18 @@
         </div>
     </div>
 
-<script>
+    <script>
         $(document).ready(function () {
-            
-                $("#demo").load("https://reqres.in/api/unkonwn", function (data, status) {
-                    if (status != null) {
-                        showdata(data)
-                    }
-                    else {
-                        alert("Error While Reciving the Data")
-                    }
-                })
-            
+
+            $("#demo").load("https://reqres.in/api/unkonwn", function (data, status) {
+                if (status != null) {
+                    showdata(data)
+                }
+                else {
+                    alert("Error While Reciving the Data")
+                }
+            })
+
         })
 
         function showdata(data) {

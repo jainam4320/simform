@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Delete Employee Data</title>
+
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- JavaScript CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JS Function -->
+    <script src="./Demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            showEmails();
+        });
+    </script>
+
+</head>
+
+<body>
+    <br>
+    <center>
+        <h1>Delete Employee Data</h1>
+    </center>
+    <br>
+    <div class="container">
+        <center>
+            <form method="POST" onsubmit="return deleteEmp()">
+                <h3>
+                    Select Emloyee :
+                </h3>
+                <select class="form-control" id="delete_emp" name="delete_emp">
+                    <option disabled selected>Select Email</option>
+                </select>
+                <br>
+                <button type="submit" class="btn btn-primary">Delete Employee</button>
+            </form>
+            <br><br>
+            <form action="./navigation.html">
+                <button type="submit" class="btn btn-primary">Go To Navigation Panel</button>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>

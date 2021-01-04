@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>Show Employee Data</title>
+
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- JavaScript CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/dt/dt-1.10.23/r-2.2.6/sb-1.0.1/sp-1.2.2/datatables.min.css" />
+
+    <!-- Data Tables JS -->
+    <script type="text/javascript"
+        src="https://cdn.datatables.net/v/dt/dt-1.10.23/r-2.2.6/sb-1.0.1/sp-1.2.2/datatables.min.js"></script>
+
+    <!-- JS Function -->
+    <script src="./Demo.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            dispData();
+        });
+    </script>
+
+</head>
+
+<body>
+    <br>
+    <center>
+        <h1>Employee Show Data</h1>
+    </center>
+    <br>
+    <div class="container">
+        <table class="table table-hover" id="displayemp">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Blood group</th>
+                    <th>Phone no.</th>
+                    <th>Job Title</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <br><br>
+        <form action="./navigation.html">
+            <center><button type="submit" class="btn btn-primary">Go To Navigation Panel</button></center>
+        </form>
+    </div>
+</body>
+
+</html>
