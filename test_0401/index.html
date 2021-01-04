@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <title>Home</title>
+    <head>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- JavaScript CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- CSS Style File -->
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+        <script>
+            function setCookie() {
+                var cname = "Cookie 1";
+                var cvalue = document.getElementById("cid").value;
+                console.log("Cookie Value = " = + cvalue);
+                var d = new Date();
+                d.setTime(d.getTime() + (1*24*60*60*1000));
+                var expires = "expires="+ d.toUTCString();
+                //document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+        </script>
+
+    </head>
+    <body>
+        <br>
+        <center>
+            <h1>Temporary Form</h1>
+        </center>
+        <div class="container">
+            <form name="sentMessage" id="contactForm" method="post">
+                <h4 style="color: red;">
+                    * required fields
+                    <br>
+                </h4>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        Name :  
+                                        <big style="color: red;">&nbsp;*</big>
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" id="name" class="form-control" placeholder="Enter Your Name Here" required />
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        Phone Number : 
+                                        <big style="color: red;">&nbsp;*</big>
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="number" id="contact_numer" class="form-control" placeholder="Enter Your Phone Number Here" required />
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        Query : 
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <textarea rows="5" cols="100" class="form-control" id="query" required data-validation-required-message="Please enter your query" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none" placeholder="Enter Your Query Here" ></textarea>
+                                </div>
+                            </div>            
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        Email : 
+                                        <big style="color: red;">&nbsp;*</big>
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="email" id="email" class="form-control" placeholder="Enter Your E-mail Here" required />
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        Address : 
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" id="address" class="form-control" placeholder="Enter Your Address Here" />
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        City Name : 
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" id="city" class="form-control" placeholder="Enter Your City Name Here" />
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        State : 
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <input type="text" id="state" class="form-control" placeholder="Enter Your State Name Here" />
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <h4> 
+                                        Country : 
+                                    </h4>
+                                </div>
+                                <div class="col-sm-8">
+                                    <select class="form-control" name="country" id="country">
+                                        <option value="india">India</option>
+                                        <option value="us">U.S.</option>
+                                        <option value="uk">U.K.</option>
+                                    </select>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
+                <h5>
+                    <input type="checkbox" id="ch1" name="ch1" class="accept" onclick="enableButton();"> I accept the terms and conditions.
+                    </input>
+                </h5>
+                
+                <br>
+                <center><button type="submit" class="process btn btn-primary" disabled="disabled" >Submit</button></center>
+            </form>
+        </div>
+        <br><br>
+        <div class="row container">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <center><button type="submit" class="btn btn-primary" onclick="setCookie();">Set Cookie</button></center>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" name="cname" id="cid" class="form-control" />       
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <center><button type="submit" class="btn btn-primary">Get Cookie</button></center>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="cookie_val" class="form-control"></label>        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <br><br>
+    </body>
+    <script>
+        function enableButton()
+        {
+            $('.process').prop('disabled',$('input.accept:checked').length == 0);
+        }
+    </script>
+</html>
