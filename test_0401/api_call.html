@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<title>Api Call</title>
+
+<head>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- JavaScript CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- CSS Style File -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+</head>
+
+<body>
+    <br><br>
+    <div class="text-center">
+        <h1>Data Shown After API Call</h1>
+    </div>
+    <br><br><br>
+    <div class="container text-center">
+        <div id="show">
+            <table class="table mt-5 table-hover" id="demo"></table>
+        </div>
+    </div>
+
+<script>
+        $(document).ready(function () {
+            
+                $("#demo").load("https://reqres.in/api/unkonwn", function (data, status) {
+                    if (status != null) {
+                        showdata(data)
+                    }
+                    else {
+                        alert("Error While Reciving the Data")
+                    }
+                })
+            
+        })
+
+        function showdata(data) {
+            data = JSON.parse(data)
+            let table = "<tr><th>ID</th><th>Name</th><th>Year</th><th>Color</th><th>Pantone Value</th></tr>"
+
+            for (var x = 0; x < 5; x++) {
+                table += "<tr><td>" + data["data"][x].id + "</td><td>" + data["data"][x].name + "</td><td>" + data["data"][x].year + "</td><td>" + data["data"][x].color + "</td><td>" + data["data"][x].pantone_value + "</td></tr>"
+            }
+            document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+</body>
+
+</html>
